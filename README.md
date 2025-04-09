@@ -9,14 +9,10 @@
 ## I. Project Overview
 This report presents a project on using Generative Adversarial Networks (GANs) to remove noise from images. The main objective was to develop a deep learning model that can take noisy images as input and produce clean, denoised images as output.
 
----
-
 ## II. Background
 Images often contain noise, which appears as grainy or speckled patterns that reduce visual quality. Noise can be caused by various factors such as camera sensors, poor lighting conditions, etc. Removing noise from images is an important task in many applications.  
 
 GANs are a type of deep learning model that consists of two neural networks: a generator and a discriminator. The generator creates new data samples, while the discriminator tries to distinguish between real and generated samples. By training these networks together, the generator learns to produce realistic outputs.
-
----
 
 ## III. Methodology
 
@@ -31,16 +27,12 @@ The loss function used to train the model included three parts:
 2. Adversarial loss to make the output look realistic.  
 3. Perceptual loss based on VGG19 features to capture high-level similarities.  
 
----
-
 ## IV. Metrics Used
 
 The following metrics were used to evaluate the performance of the denoising model:  
 1. Peak Signal-to-Noise Ratio (PSNR): PSNR measures the ratio between the maximum possible power of a signal and the power of corrupting noise. A higher PSNR indicates better image quality. It is calculated using the mean squared error (MSE) between the denoised and clean images.    
 2. Structural Similarity Index (SSIM): SSIM assesses the perceived quality of an image by comparing the similarity of its luminance, contrast, and structure with the reference image. SSIM values range from -1 to 1, with 1 indicating perfect similarity.  
-3. Fréchet Inception Distance (FID): FID measures the difference between the distributions of generated and real images. It is calculated by comparing the activations of a pre-trained Inception v3 model on the generated and real images. Lower FID scores suggest that the generated images are more similar to the real images.
-
----
+3. Fréchet Inception Distance (FID): FID measures the difference between the distributions of generated and real images. It is calculated by comparing the activations of a pre-trained Inception v3 model on the generated and real images. Lower FID scores suggest that the generated images are more similar to the real images.  
 
 ## V. Results & Discussion
 
@@ -57,15 +49,11 @@ The denoised image shows a significant reduction in noise compared to the input 
 
 On the test set, the trained model achieved an average PSNR of 15.39 dB and an average SSIM of 0.3630. These quantitative metrics indicate an improvement in image quality compared to the noisy inputs, but there is still room for further improvement.
 
----
-
 ## VI. Conclusion
 
 In this project, I developed a GAN-based model for image denoising. The U-Net generator and PatchGAN discriminator, trained with a combination of pixel loss, adversarial loss, and perceptual loss, were able to effectively remove noise from images while preserving the essential content.
 
 The results show the potential of GANs for image denoising tasks. However, there is room for further improvement, such as expanding the training data, exploring more advanced architectures, and fine-tuning the loss functions.
-
----
 
 ## VII. Coding Implementation
 
