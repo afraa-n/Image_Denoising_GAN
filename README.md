@@ -69,4 +69,4 @@ The results show the potential of GANs for image denoising tasks. However, there
 
 ## VII. Coding Implementation
 
-The implementation can be found at the end of the `Image Denoising using GANs - Afraa.ipynb` file
+The implementation can be found at the end of the `Image_Denoising_Afraa.ipynb` file
